@@ -109,7 +109,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TECHNICSHOPEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TECHNICSHOPEnt" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Feedback" EntityType="Self.Feedback" />
           <EntitySet Name="Product" EntityType="Self.Product" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -123,7 +123,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище TECHNICSHOPModelContainer" CdmEntityContainer="TECHNICSHOPEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище TECHNICSHOPModelContainer" CdmEntityContainer="TECHNICSHOPEnt">
           <EntitySetMapping Name="Feedback">
             <EntityTypeMapping TypeName="TECHNICSHOPModel.Feedback">
               <MappingFragment StoreEntitySet="Feedback">

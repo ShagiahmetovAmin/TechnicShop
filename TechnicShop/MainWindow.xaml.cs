@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TechnicShop;
 
 namespace TechnicShop
 {
@@ -23,6 +24,7 @@ namespace TechnicShop
         public MainWindow()
         {
             InitializeComponent();
+            Information.Navigate(new ListPage());
         }
     }
 }

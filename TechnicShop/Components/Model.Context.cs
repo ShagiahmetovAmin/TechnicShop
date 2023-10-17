@@ -13,10 +13,10 @@ namespace TechnicShop.Components
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TECHNICSHOPEntities : DbContext
+    public partial class TECHNICSHOPEnt : DbContext
     {
-        public TECHNICSHOPEntities()
-            : base("name=TECHNICSHOPEntities")
+        public TECHNICSHOPEnt()
+            : base("name=TECHNICSHOPEnt")
         {
         }
     

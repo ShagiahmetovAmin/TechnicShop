@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlTypes;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,22 +13,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
-namespace TechnicShop
+namespace TechnicShop.Components
 {
     /// <summary>
-    /// Логика взаимодействия для InfoPage.xaml
+    /// Логика взаимодействия для ProductUserControl.xaml
     /// </summary>
-    public partial class InfoPage : Page
+    public partial class ProductUserControl : UserControl
     {
-        public InfoPage(string name,int evaluation,decimal price)
+        public ProductUserControl(Image image, string name, double evaluation,decimal oldprice, string price, Visibility oldpriceVis)
         {
             InitializeComponent();
+            Imgsource = image;
             NameTb.Text = name;
             EvaluationTb.Text = evaluation.ToString();
-            PriceTb.Text = price.ToString();
-
-
+            PriceTb.Text = price;
+            OldPriceTb.Text = oldprice.ToString("0");
+            OldPriceTb.Visibility = oldpriceVis;
         }
     }
 }

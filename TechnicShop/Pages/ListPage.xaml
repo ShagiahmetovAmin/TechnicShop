@@ -15,7 +15,7 @@
             <RowDefinition Height="14*"/>
         </Grid.RowDefinitions>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
-            <WrapPanel x:Name="ServiceWrapPanel" Grid.Row="1">
+            <WrapPanel HorizontalAlignment="Center" x:Name="ServiceWrapPanel" Grid.Row="1">
 
             </WrapPanel>
         </ScrollViewer>

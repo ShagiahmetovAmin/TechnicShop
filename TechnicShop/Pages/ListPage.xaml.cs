@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TechnicShop.Components;
 
 namespace TechnicShop
 {
@@ -26,7 +27,7 @@ namespace TechnicShop
             var newinf = App.db.Product.ToList();
             foreach(var item in newinf)
             {
-                ServiceWrapPanel.Children.Add(item);
+                ServiceWrapPanel.Children.Add( new ProductUserControl(new Image(), item.Title, item.CountOtz, item.Cost, (string)item.Priceprod, item.OldPriceVis));
             }
         }
     }

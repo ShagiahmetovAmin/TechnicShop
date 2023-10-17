@@ -10,6 +10,10 @@
         <Style TargetType="Button">
             <Setter Property="Background" Value="IndianRed"></Setter>
         </Style>
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush" Value="IndianRed"></Setter>
+            <Setter Property="BorderThickness" Value="1"></Setter>
+        </Style>
             
         
     </Application.Resources>

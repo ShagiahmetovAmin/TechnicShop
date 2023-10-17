@@ -14,6 +14,6 @@ namespace TechnicShop
     /// </summary>
     public partial class App : Application
     {
-        public static TECHNICSHOPEntities db= new TECHNICSHOPEntities();
+        public static TECHNICSHOPEnt db= new TECHNICSHOPEnt();
     }
 }
