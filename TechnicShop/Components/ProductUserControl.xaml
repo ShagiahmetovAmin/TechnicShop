@@ -17,8 +17,12 @@
                 <TextBlock x:Name="NameTb"></TextBlock>
                 <StackPanel Orientation="Horizontal">
                     <Image x:Name="Imgsource" Width="40" Height="50"  Source="/Resourses/star.png" />
-                    <TextBlock Foreground="IndianRed" x:Name="EvaluationTb"></TextBlock>
-                    <TextBlock x:Name="OtzovTb"></TextBlock>
+                    <TextBlock Margin="10 0 20 0" Foreground="IndianRed" x:Name="EvaluationTb"></TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="OtzovTb"></TextBlock>
+                        <TextBlock Margin="4 0 0 0">отзыв</TextBlock>
+                    </StackPanel>
+                    
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 0 10 0"  x:Name="PriceTb"></TextBlock>

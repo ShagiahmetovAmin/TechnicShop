@@ -27,7 +27,7 @@ namespace TechnicShop
             var newinf = App.db.Product.ToList();
             foreach(var item in newinf)
             {
-                ServiceWrapPanel.Children.Add( new ProductUserControl(new Image(), item.Title, item.CountOtz, item.Cost, (string)item.Priceprod, item.OldPriceVis));
+                ServiceWrapPanel.Children.Add( new ProductUserControl(new Image(), item.Title, item.AvgEvolv,item.CountOtz, item.Cost, (string)item.Priceprod, item.OldPriceVis));
             }
         }
     }

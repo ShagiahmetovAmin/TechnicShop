@@ -22,12 +22,13 @@ namespace TechnicShop.Components
     /// </summary>
     public partial class ProductUserControl : UserControl
     {
-        public ProductUserControl(Image image, string name, double evaluation,decimal oldprice, string price, Visibility oldpriceVis)
+        public ProductUserControl(Image image, string name, double evaluation, double otzov,decimal oldprice, string price, Visibility oldpriceVis)
         {
             InitializeComponent();
             Imgsource = image;
             NameTb.Text = name;
             EvaluationTb.Text = evaluation.ToString();
+            OtzovTb.Text = otzov.ToString();
             PriceTb.Text = price;
             OldPriceTb.Text = oldprice.ToString("0");
             OldPriceTb.Visibility = oldpriceVis;

@@ -29,8 +29,19 @@ namespace TechnicShop.Components
         }
         public double CountOtz
         {
-            get { return App.db.Feedback.Where(x => x.ProductId == Id).Count();}
+            get { return Feedback.Where(x => x.ProductId == Id).Count();}
         }
-        
+         public double AvgEvolv
+         {
+            get 
+            { 
+                if(Feedback.Count() == 0)
+                {
+                    return 0;
+                }
+                else
+                return Feedback.Average(x => x.Evaluation);
+            }
+         }
     }
 }
