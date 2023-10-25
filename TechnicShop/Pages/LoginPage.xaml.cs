@@ -12,23 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TechnicShop.Components;
 
-namespace TechnicShop
+namespace TechnicShop.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ListPage.xaml
+    /// Логика взаимодействия для LoginPage.xaml
     /// </summary>
-    public partial class ListPage : Page
+    public partial class LoginPage : Page
     {
-        public ListPage()
+        public LoginPage()
         {
             InitializeComponent();
-            var newinf = App.db.Product.ToList();
-            foreach(var item in newinf)
-            {
-                ServiceWrapPanel.Children.Add( new ProductUserControl(item));
-            }
         }
     }
 }

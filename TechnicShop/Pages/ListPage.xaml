@@ -19,5 +19,13 @@
 
             </WrapPanel>
         </ScrollViewer>
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Row="2">
+            <StackPanel Orientation="Horizontal"  x:Name="AdminFuc">
+
+                <TextBlock Margin="30 0 80 0" VerticalAlignment="Center">Добавить товар</TextBlock>
+                <Button>Добавить</Button>
+            </StackPanel>
+        </Border>
+        
     </Grid>
 </Page>

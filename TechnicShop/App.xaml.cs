@@ -15,5 +15,6 @@ namespace TechnicShop
     public partial class App : Application
     {
         public static TECHNICSHOPEnt db= new TECHNICSHOPEnt();
+        public static bool adminsh = false;
     }
 }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,16 +24,49 @@ namespace TechnicShop.Components
     /// </summary>
     public partial class ProductUserControl : UserControl
     {
-        public ProductUserControl(Image image, string name, double evaluation, double otzov,decimal oldprice, string price, Visibility oldpriceVis)
+        Product product;
+        public ProductUserControl(Product _product)
         {
+            
             InitializeComponent();
-            Imgsource = image;
-            NameTb.Text = name;
-            EvaluationTb.Text = evaluation.ToString();
-            OtzovTb.Text = otzov.ToString();
-            PriceTb.Text = price;
-            OldPriceTb.Text = oldprice.ToString("0");
-            OldPriceTb.Visibility = oldpriceVis;
+            product = _product;
+            ProductImage.Source = GetImage(product.MainImage);
+            NameTb.Text = product.Title;
+            EvaluationTb.Text = product.AvgEvolv.ToString();
+            OtzovTb.Text = product.CountOtz.ToString();
+            PriceTb.Text = product.Priceprod.ToString();
+            OldPriceTb.Text = product.Cost.ToString("0");
+            OldPriceTb.Visibility = product.OldPriceVis;
+            if(App.adminsh == true)
+            {
+                AdmRedDelVis.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        public BitmapImage GetImage(byte[] byteimage)
+        {
+            BitmapImage bitmapImg = new BitmapImage();
+            try
+            {
+                if (product.MainImage != null)
+                {
+                    MemoryStream byteStr = new MemoryStream(byteimage);
+                    bitmapImg.BeginInit();
+                    bitmapImg.StreamSource = byteStr;
+                    bitmapImg.EndInit();
+                    
+                }
+                else
+                {
+                    bitmapImg = new BitmapImage(new Uri(@"\Resources\dayson.jpg", UriKind.Relative));
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+            return bitmapImg;
         }
     }
 }

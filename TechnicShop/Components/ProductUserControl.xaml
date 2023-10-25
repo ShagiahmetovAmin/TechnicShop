@@ -12,7 +12,7 @@
                 <RowDefinition Height="9*"/>
                 <RowDefinition Height="11*"/>
             </Grid.RowDefinitions>
-            <Image Grid.Row="0" Source="/Resourses/dayson.jpg" />
+            <Image Width="220" Height="170" Grid.Row="0" x:Name="ProductImage"/>
             <StackPanel Grid.Row="1">
                 <TextBlock x:Name="NameTb"></TextBlock>
                 <StackPanel Orientation="Horizontal">
@@ -40,6 +40,17 @@
                         <Image Height="50"  Source="/Resourses/stats.jpg" />
 
                     </Button>
+
+                    <StackPanel x:Name="AdmRedDelVis" Margin="10 0" VerticalAlignment="Center">
+                        <Button>
+                            <TextBlock FontSize="15">Redact</TextBlock>
+                        </Button>
+
+                        <Button>
+                        <TextBlock FontSize="15">Del</TextBlock>
+                        </Button>
+                    </StackPanel>
+                    
                 </StackPanel>
 
             </StackPanel>

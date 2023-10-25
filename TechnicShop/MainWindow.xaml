@@ -8,10 +8,16 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="59*"/>
+            <RowDefinition Height="70*"/>
             <RowDefinition Height="375*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">Technic shop</TextBlock>
-        <Frame Grid.Row="1" x:Name="Information"></Frame>
+
+        <Button BorderBrush="Black" Background="White" BorderThickness="1" HorizontalAlignment="Right" x:Name="LoginBtn" Grid.Row="0" Width="65" Height="65" Margin="0 0 25 0" Click="LoginBtn_Click">
+           Вход
+        </Button>
+        <Button BorderBrush="Black" Background="White" BorderThickness="1" HorizontalAlignment="Left" x:Name="GoBackBtn" Grid.Row="0" Width="65" Height="65" Margin="0 0 25 0">Back</Button>
+
+        <Frame Grid.Row="1" x:Name="Information" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

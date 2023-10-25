@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TechnicShop;
+using System.IO;
+using TechnicShop.Pages;
+using TechnicShop.Components;
 
 namespace TechnicShop
 {
@@ -24,7 +27,24 @@ namespace TechnicShop
         public MainWindow()
         {
             InitializeComponent();
+            //ДОБАВЛЕНИЕ В бд бинарного кода к картинке
+            //var path = @"C:\Users\222117\Desktop\"; - указываем, где хранится папка
+            //foreach(var i in App.db.Product.ToArray()) - прогоняем каждый объект
+            //{
+            //    var fullPath = path + i.MainImagePath.Trim();
+            //    var imageByte = File.ReadAllBytes(fullPath);
+            //    i.MainImage = imageByte;
+            //}
+            //App.db.SaveChanges(); - сохраняем изменения
+
             Information.Navigate(new ListPage());
+
         }
+
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Information.Navigate(new LoginPage());
+        }
+
     }
 }
