@@ -29,6 +29,10 @@ namespace TechnicShop
             {
                 ServiceWrapPanel.Children.Add( new ProductUserControl(item));
             }
+            if(App.adminsh != false)
+            {
+                AdminFuc.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

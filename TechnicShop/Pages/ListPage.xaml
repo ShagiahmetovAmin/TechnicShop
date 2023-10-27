@@ -14,6 +14,34 @@
             <RowDefinition Height="63*"/>
             <RowDefinition Height="14*"/>
         </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
+                <ComboBox>
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem></ComboBoxItem>
+                </ComboBox>
+                <TextBlock>Скидка</TextBlock>
+            </StackPanel>
+
+            <StackPanel Margin="20 0" Orientation="Horizontal">
+                <ComboBox>
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem></ComboBoxItem>
+                </ComboBox>
+                <TextBlock></TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <ComboBox>
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem></ComboBoxItem>
+                </ComboBox>
+                <TextBlock></TextBlock>
+            </StackPanel>
+        </StackPanel>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
             <WrapPanel HorizontalAlignment="Center" x:Name="ServiceWrapPanel" Grid.Row="1">
 

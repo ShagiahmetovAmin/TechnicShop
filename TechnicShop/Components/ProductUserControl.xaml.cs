@@ -37,7 +37,7 @@ namespace TechnicShop.Components
             PriceTb.Text = product.Priceprod.ToString();
             OldPriceTb.Text = product.Cost.ToString("0");
             OldPriceTb.Visibility = product.OldPriceVis;
-            if(App.adminsh == true)
+            if(App.adminsh == false)
             {
                 AdmRedDelVis.Visibility = Visibility.Collapsed;
             }

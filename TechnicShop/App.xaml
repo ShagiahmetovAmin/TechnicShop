@@ -9,6 +9,13 @@
         </Style>
         <Style TargetType="Button">
             <Setter Property="Background" Value="IndianRed"></Setter>
+            <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="20">
+                </Setter>
+            </Style>
+            </Style.Resources>
+            
         </Style>
         <Style TargetType="Border">
             <Setter Property="BorderBrush" Value="IndianRed"></Setter>

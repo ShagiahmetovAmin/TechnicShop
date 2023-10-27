@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TechnicShop.Components;
 
 namespace TechnicShop.Pages
 {
@@ -23,6 +24,34 @@ namespace TechnicShop.Pages
         public LoginPage()
         {
             InitializeComponent();
+           
+        }
+
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.NextPageLoad(new PageComponent(new ListPage()));
+        }
+
+        private void MailTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (MailTb.Text.Length != 0)
+            {
+                GoShopBtn.IsEnabled = true;
+            }
+            else { GoShopBtn.IsEnabled = false; }
+            if(PasswPb.ToString() == "0000")
+            {
+                App.adminsh = true;
+            }
+            else App.adminsh = false;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MailTb.Clear();
+            PasswPb.Clear();
         }
     }
 }

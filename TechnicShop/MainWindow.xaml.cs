@@ -26,6 +26,7 @@ namespace TechnicShop
     {
         public MainWindow()
         {
+            Navigation.mainWindow = this;
             InitializeComponent();
             //ДОБАВЛЕНИЕ В бд бинарного кода к картинке
             //var path = @"C:\Users\222117\Desktop\"; - указываем, где хранится папка
@@ -37,13 +38,13 @@ namespace TechnicShop
             //}
             //App.db.SaveChanges(); - сохраняем изменения
 
-            Information.Navigate(new ListPage());
+            Navigation.NextPageLoad(new PageComponent(new ListPage()));
 
         }
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            Information.Navigate(new LoginPage());
+            Navigation.NextPageLoad(new PageComponent(new LoginPage()));
         }
 
     }
