@@ -31,7 +31,7 @@ namespace TechnicShop
             }
             if(App.adminsh != false)
             {
-                AdminFuc.Visibility = Visibility.Collapsed;
+                AdminFuc.Visibility = Visibility.Visible;
             }
         }
     }

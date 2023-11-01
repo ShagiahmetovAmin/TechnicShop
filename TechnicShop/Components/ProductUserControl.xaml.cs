@@ -37,10 +37,11 @@ namespace TechnicShop.Components
             PriceTb.Text = product.Priceprod.ToString();
             OldPriceTb.Text = product.Cost.ToString("0");
             OldPriceTb.Visibility = product.OldPriceVis;
-            if(App.adminsh == false)
+            if(App.adminsh == true)
             {
-                AdmRedDelVis.Visibility = Visibility.Collapsed;
+                AdmRedDelVis.Visibility = Visibility.Visible;
             }
+            else AdmRedDelVis.Visibility = Visibility.Collapsed;
         }
 
         public BitmapImage GetImage(byte[] byteimage)

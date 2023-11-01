@@ -44,6 +44,7 @@ namespace TechnicShop.Pages
             if(PasswPb.ToString() == "0000")
             {
                 App.adminsh = true;
+                Navigation.Update(new PageComponent(new ListPage()));
             }
             else App.adminsh = false;
         }

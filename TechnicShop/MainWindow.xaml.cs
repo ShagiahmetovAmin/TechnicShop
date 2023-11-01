@@ -44,7 +44,8 @@ namespace TechnicShop
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.NextPageLoad(new PageComponent(new LoginPage()));
+            
+            Navigation.NextPageLoad((new PageComponent(new LoginPage())));
         }
 
     }

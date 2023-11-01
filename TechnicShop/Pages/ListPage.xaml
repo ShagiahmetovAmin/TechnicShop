@@ -16,30 +16,30 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <StackPanel Orientation="Horizontal">
-                <ComboBox>
-                    <ComboBoxItem></ComboBoxItem>
-                    <ComboBoxItem></ComboBoxItem>
-                    <ComboBoxItem></ComboBoxItem>
+                <ComboBox Margin="20 10 10 0" Width="140">
+                    <ComboBoxItem>По умолчанию</ComboBoxItem>
+                    <ComboBoxItem>По возрастанию</ComboBoxItem>
+                    <ComboBoxItem>По убыванию</ComboBoxItem>
                 </ComboBox>
-                <TextBlock>Скидка</TextBlock>
+                <TextBlock VerticalAlignment="Center">Сортировка</TextBlock>
             </StackPanel>
 
             <StackPanel Margin="20 0" Orientation="Horizontal">
-                <ComboBox>
-                    <ComboBoxItem></ComboBoxItem>
-                    <ComboBoxItem></ComboBoxItem>
-                    <ComboBoxItem></ComboBoxItem>
+                <ComboBox Margin="20 10 10 0" Width="140">
+                    <ComboBoxItem>нет скидки</ComboBoxItem>
+                    <ComboBoxItem>меньше 5%</ComboBoxItem>
+                    <ComboBoxItem>больше 5%</ComboBoxItem>
                 </ComboBox>
-                <TextBlock></TextBlock>
+                <TextBlock VerticalAlignment="Center">Размер скидки</TextBlock>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
                 <ComboBox>
-                    <ComboBoxItem></ComboBoxItem>
-                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem>С лучшей оценкой</ComboBoxItem>
+                    <ComboBoxItem>С худшей оценкой</ComboBoxItem>
                     <ComboBoxItem></ComboBoxItem>
                 </ComboBox>
-                <TextBlock></TextBlock>
+                <TextBlock>Оценка</TextBlock>
             </StackPanel>
         </StackPanel>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1">

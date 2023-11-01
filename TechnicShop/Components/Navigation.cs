@@ -31,7 +31,7 @@ namespace TechnicShop.Components
             }
         }
 
-        private static void Update(PageComponent pageComponent)
+        public static void Update(PageComponent pageComponent)
         {
             mainWindow.Information.Navigate(pageComponent.Page);
         }
