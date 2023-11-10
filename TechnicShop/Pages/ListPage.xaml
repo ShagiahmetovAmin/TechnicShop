@@ -14,9 +14,10 @@
             <RowDefinition Height="63*"/>
             <RowDefinition Height="14*"/>
         </Grid.RowDefinitions>
+        <Border BorderBrush="Black" Background="IndianRed">
         <StackPanel Orientation="Horizontal">
             <StackPanel Orientation="Horizontal">
-                <ComboBox Margin="20 10 10 0" Width="140">
+                <ComboBox x:Name="ProductSort" SelectionChanged="ProductSort_SelectionChanged" Margin="20 10 10 0" Width="140">
                     <ComboBoxItem>По умолчанию</ComboBoxItem>
                     <ComboBoxItem>По возрастанию</ComboBoxItem>
                     <ComboBoxItem>По убыванию</ComboBoxItem>
@@ -25,16 +26,19 @@
             </StackPanel>
 
             <StackPanel Margin="20 0" Orientation="Horizontal">
-                <ComboBox Margin="20 10 10 0" Width="140">
-                    <ComboBoxItem>нет скидки</ComboBoxItem>
-                    <ComboBoxItem>меньше 5%</ComboBoxItem>
-                    <ComboBoxItem>больше 5%</ComboBoxItem>
-                </ComboBox>
-                <TextBlock VerticalAlignment="Center">Размер скидки</TextBlock>
+                    <ComboBox x:Name="DiscountProd" Margin="20 10 10 0" Width="140" SelectionChanged="DiscountProd_SelectionChanged">
+                        <ComboBoxItem>Все</ComboBoxItem>
+                        <ComboBoxItem>от 0 до 5</ComboBoxItem>
+                        <ComboBoxItem>от 5 до 15</ComboBoxItem>
+                        <ComboBoxItem>от 15 до 30</ComboBoxItem>
+                        <ComboBoxItem>от 30 до 70</ComboBoxItem>
+                        <ComboBoxItem>от 70 до 100</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock VerticalAlignment="Center">Размер скидки</TextBlock>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <ComboBox>
+                <ComboBox x:Name="ReitTovar">
                     <ComboBoxItem>С лучшей оценкой</ComboBoxItem>
                     <ComboBoxItem>С худшей оценкой</ComboBoxItem>
                     <ComboBoxItem></ComboBoxItem>
@@ -42,13 +46,14 @@
                 <TextBlock>Оценка</TextBlock>
             </StackPanel>
         </StackPanel>
+        </Border>
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
             <WrapPanel HorizontalAlignment="Center" x:Name="ServiceWrapPanel" Grid.Row="1">
 
             </WrapPanel>
         </ScrollViewer>
         <Border BorderBrush="Black" BorderThickness="2" Grid.Row="2">
-            <StackPanel Orientation="Horizontal"  x:Name="AdminFuc">
+            <StackPanel Orientation="Horizontal" Visibility="Collapsed" x:Name="AdminFuc">
 
                 <TextBlock Margin="30 0 80 0" VerticalAlignment="Center">Добавить товар</TextBlock>
                 <Button>Добавить</Button>

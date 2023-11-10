@@ -41,7 +41,7 @@
 
                     </Button>
 
-                    <StackPanel x:Name="AdmRedDelVis" Margin="10 0" VerticalAlignment="Center">
+                    <StackPanel Visibility="Collapsed" x:Name="AdmRedDelVis" Margin="10 0" VerticalAlignment="Center">
                         <Button>
                             <TextBlock FontSize="15">Redact</TextBlock>
                         </Button>

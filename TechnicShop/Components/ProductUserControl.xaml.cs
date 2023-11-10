@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using TechnicShop;
 
 namespace TechnicShop.Components
 {
@@ -37,11 +38,14 @@ namespace TechnicShop.Components
             PriceTb.Text = product.Priceprod.ToString();
             OldPriceTb.Text = product.Cost.ToString("0");
             OldPriceTb.Visibility = product.OldPriceVis;
-            if(App.adminsh == true)
+            if (App.adminsh == true)
             {
                 AdmRedDelVis.Visibility = Visibility.Visible;
             }
-            else AdmRedDelVis.Visibility = Visibility.Collapsed;
+            else
+            {
+                AdmRedDelVis.Visibility = Visibility.Collapsed;
+            }
         }
 
         public BitmapImage GetImage(byte[] byteimage)

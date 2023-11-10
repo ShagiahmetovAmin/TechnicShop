@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TechnicShop.Components;
+using TechnicShop;
 
 namespace TechnicShop.Pages
 {
@@ -24,7 +25,15 @@ namespace TechnicShop.Pages
         public LoginPage()
         {
             InitializeComponent();
-           
+            if (PasswPb.Password.ToString() == "0000")
+            {
+                App.adminsh = true;
+            }
+            else
+            {
+                App.adminsh = false;
+            }
+
         }
 
 
@@ -40,13 +49,11 @@ namespace TechnicShop.Pages
             {
                 GoShopBtn.IsEnabled = true;
             }
-            else { GoShopBtn.IsEnabled = false; }
-            if(PasswPb.ToString() == "0000")
-            {
-                App.adminsh = true;
-                Navigation.Update(new PageComponent(new ListPage()));
+            else 
+            { 
+                GoShopBtn.IsEnabled = false; 
             }
-            else App.adminsh = false;
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
